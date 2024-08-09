@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
 </head>
 <body>
 <div class="container">
@@ -26,5 +27,33 @@
         </div>
     </div>
 </div>
+
+<div class="modal">
+    <div class="container-modal">
+        <div class="content-modal">
+            <div class="modal-header">
+                <button type="button" class="close-modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="group-checkbox">
+                        <div class="checkbox">
+                            <input type="checkbox" name="remember-password">
+                            <div class="label-checkbox">Запомнить пароль</div>
+                        </div>
+                    </div>
+                    <a href="#" class="restore-password">Восстановить</a>
+
+                    <button type="button" class="login">Войти</button>
+                    <a href="#" class="register">Зарегистрироваться</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="./js/script.js"></script>
 </body>
 </html>
