@@ -1,6 +1,7 @@
 $(document).ready(function () {
     let $modal = $(".modal");
     $(".block-demo").on("click", ".btn", function (){
+        $modal.find("form").empty();
         createElement();
         $modal.show();
     });
@@ -38,7 +39,41 @@ function createElement(){
 
     div.append(inputText, inputPassword);
 
+    let divGroupCheckbox = document.createElement("div");
+    divGroupCheckbox.classList.add("group-checkbox");
+
+    let divCheckbox = document.createElement("div");
+    divCheckbox.classList.add("checkbox");
+
+    divGroupCheckbox.append(divCheckbox);
+
+    let inputCheckbox = document.createElement("input");
+    inputCheckbox.type = "checkbox";
+    inputCheckbox.name = "remember-password";
+
+    let divLabel = document.createElement("div");
+    divLabel.classList.add("label-checkbox");
+    divLabel.innerHTML = "Запомнить пароль";
+
+    divCheckbox.append(inputCheckbox, divLabel);
+
+    let aRestorePassword = document.createElement("a");
+    aRestorePassword.href = "#";
+    aRestorePassword.classList.add("restore-password");
+    aRestorePassword.innerHTML = "Восстановить";
+
+    let buttonLogin = document.createElement("button");
+    buttonLogin.type = "button";
+    buttonLogin.classList.add("login");
+    buttonLogin.innerHTML = "Войти";
+
+    let aRegister = document.createElement("a");
+    aRegister.href = "#";
+    aRegister.classList.add("register");
+    aRegister.innerHTML = "Зарегистрироваться";
+
+
     let form = document.querySelector("form");
-    form.prepend(titleForm, div);
+    form.append(titleForm, div, divGroupCheckbox, aRestorePassword, buttonLogin, aRegister);
     
 }
